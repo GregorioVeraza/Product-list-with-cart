@@ -6,8 +6,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: hsl(223, 64%, 98%);
+    background-color: hsl(13, 31%, 94%);
     height: 100vh;
+    font-size: x-small;
 }
 
 #main-container{
@@ -16,6 +17,10 @@ body {
     justify-content: center;
     gap: 20px;
     width: 100%;
+}
+
+#title{
+    align-self: center;
 }
 
 main{
@@ -40,12 +45,14 @@ aside{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 20%;
     background-color: white;
     border-radius: 10px;
     margin-left: 20px;
     padding: 20px;
     height: fit-content;
+    margin-right: 40px;
+    justify-content: center;
 }
 
 img{
@@ -61,17 +68,16 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
-.product div{
+.product div:nth-child(1) {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
 }
-.product div button{
+.product div button:nth-child(2){
     margin-top: -10px;
     display: flex;
     flex-direction: row;
@@ -85,5 +91,95 @@ button{
     align-self: center;
     justify-self: center;
     place-self: center;
-    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    height: 30px;
+    border: 1px solid hsl(7, 20%, 60%);
+}
+
+button:hover{
+    cursor: pointer;
+    color: hsl(14, 86%, 42%);
+}
+
+h3{
+    color: hsl(14, 86%, 42%);
+}
+
+h4{
+    color: hsl(14, 25%, 72%);
+}
+
+#cart{
+    align-self: flex-start;
+}
+
+
+
+.quantity-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+.oculto {
+    display: none;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.prices{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#order-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#order-total p{
+    margin: 0;
+}
+
+#carbon-neutral{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: hsl(13, 31%, 94%);
+    border-radius: 10px;
+}
+
+#carbon-neutral img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+#order-container button{
+    width: 100%;
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+    border: none;
+    margin-top: 20px;
+}
+
+#order-container button:hover{
+    background-color: hsl(14, 86%, 32%);
+    cursor: pointer;
+}
+
+#order-container{
+    display: none;
 }

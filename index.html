@@ -8,17 +8,24 @@
   
   <title>Frontend Mentor | Product list with cart</title>
 
+  
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="main-container">
     <main>
-      <h1>Desserts</h1>
+      <h1 id="title">Desserts</h1>
       <div id="products-container">
+
         <div class="product">
           <div>
             <img src="./assets/images/image-waffle-desktop.jpg" alt="Waffle image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(0)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(0)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(0)"></button>
+            </div>
           </div>
           
           
@@ -33,7 +40,12 @@
         <div class="product">
           <div>
             <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="creme Brûlée image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(1)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(1)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(1)"></button>
+            </div>
           </div>
           <h4>Crème Brûlée</h4>
           <h2>Vanilla Bean Crème Brûlée</h2>
@@ -43,7 +55,12 @@
         <div class="product">
           <div>
             <img src="./assets/images/image-macaron-desktop.jpg" alt="Macaron image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(2)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(2)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(2)"></button>
+            </div>
           </div>
           
           <h4>Macaron</h4>
@@ -55,7 +72,12 @@
         <div class="product">
           <div>
             <img src="./assets/images/image-tiramisu-desktop.jpg" alt="Macaron image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(3)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(3)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(3)"></button>
+            </div>
           </div>
 
           <h4>Tiramisu</h4>
@@ -67,7 +89,12 @@
         <div class="product">
           <div>
             <img src="./assets/images/image-baklava-desktop.jpg" alt="Baklava image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(4)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(4)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(4)"></button>
+            </div>
           </div>
           
 
@@ -79,7 +106,12 @@
         <div class="product">
           <div>
             <img src="./assets/images/image-meringue-desktop.jpg" alt="Lemon Meringue Pie image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(5)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(5)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(5)"></button>
+            </div>
           </div>
 
           <h4>Pie</h4>
@@ -92,7 +124,12 @@
         <div class="product">
           <div>
             <img src="./assets/images/image-cake-desktop.jpg" alt="Red Velvet Cake image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(6)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(6)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(6)"></button>
+            </div>
           </div>
 
           <h4>Cake</h4>
@@ -103,7 +140,12 @@
         <div class="product">
           <div>
             <img src="./assets/images/image-brownie-desktop.jpg" alt="Salted Caramel Brownie image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(7)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(7)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(7)"></button>
+            </div>
           </div>
 
           <h4>Brownie</h4>
@@ -116,7 +158,12 @@
         <div class="product">
           <div>
             <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="Panna Cotta image">
-            <button><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <button onclick="addToCart(8)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
+            <div class="quantity-controls oculto">
+              <button onclick="incrementFromCart(8)"></button>
+              <p class="counter">0</p>
+              <button onclick="decrementFromCart(8)"></button>
+            </div>
           </div>
 
           <h4>Panna Cotta</h4>
@@ -133,9 +180,24 @@
     </main>
     
     <aside>
-      Your Cart (<!-- Quantity -->)
-      Your added items will appear here
+      <h1 id="cart">Your Cart (<em id="total">0</em>)</h1>
+      <div id="cart-container">
+        <img src="./assets/images/illustration-empty-cart.svg" alt="empty cart image">
+        <p>Your added items will appear here</p>
+      </div>
+      <div id="order-container">
+        <div id="order-total">
+          <p>Order Total</p>
+          <em id="total-price">$00</em>
+        </div>
+        <div id="carbon-neutral">
+          <img src="./assets/images/icon-carbon-neutral.svg" alt="carbon neutral delivery">
+          <p>This is a <b>carbon-neutral</b> delivery</p>
+        </div>
+        <button onclick="">Confirm Order</button>
+      </div>
     </aside>
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>
