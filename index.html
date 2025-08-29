@@ -12,6 +12,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <section id="confirm" class="ocult-confirm">
+    <img src="./assets/images/icon-order-confirmed.svg" alt="check logo">
+    <h1>Order Confirmed</h1>
+    <h4>We hope you enjoy your food!</h4>
+    <article id="food-details">
+      <!--añadir detalle con js-->
+    </article>
+    <div id="order-total" class="confirmed-total">
+        <p>Order Total</p>
+        <b id="total-price">$00</b>
+    </div>
+      <button class="last-button" onclick="refresh()">Start New Order</button>
+  </section>
+  <div id="background" class="ocult-confirm"></div>
   <div id="main-container">
     <main>
       <h1 id="title">Desserts</h1>
@@ -22,9 +37,13 @@
             <img src="./assets/images/image-waffle-desktop.jpg" alt="Waffle image">
             <button onclick="addToCart(0)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(0)"></button>
+              <button onclick="incrementFromCart(0)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(0)"></button>
+              <button onclick="decrementFromCart(0)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
           
@@ -42,9 +61,13 @@
             <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="creme Brûlée image">
             <button onclick="addToCart(1)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(1)"></button>
+              <button onclick="incrementFromCart(1)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(1)"></button>
+              <button onclick="decrementFromCart(1)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
           <h4>Crème Brûlée</h4>
@@ -57,9 +80,13 @@
             <img src="./assets/images/image-macaron-desktop.jpg" alt="Macaron image">
             <button onclick="addToCart(2)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(2)"></button>
+              <button onclick="incrementFromCart(2)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(2)"></button>
+              <button onclick="decrementFromCart(2)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
           
@@ -74,9 +101,13 @@
             <img src="./assets/images/image-tiramisu-desktop.jpg" alt="Macaron image">
             <button onclick="addToCart(3)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(3)"></button>
+              <button onclick="incrementFromCart(3)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(3)"></button>
+              <button onclick="decrementFromCart(3)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
 
@@ -91,9 +122,13 @@
             <img src="./assets/images/image-baklava-desktop.jpg" alt="Baklava image">
             <button onclick="addToCart(4)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(4)"></button>
+              <button onclick="incrementFromCart(4)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(4)"></button>
+              <button onclick="decrementFromCart(4)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
           
@@ -108,9 +143,13 @@
             <img src="./assets/images/image-meringue-desktop.jpg" alt="Lemon Meringue Pie image">
             <button onclick="addToCart(5)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(5)"></button>
+              <button onclick="incrementFromCart(5)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(5)"></button>
+              <button onclick="decrementFromCart(5)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
 
@@ -126,9 +165,13 @@
             <img src="./assets/images/image-cake-desktop.jpg" alt="Red Velvet Cake image">
             <button onclick="addToCart(6)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(6)"></button>
+              <button onclick="incrementFromCart(6)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(6)"></button>
+              <button onclick="decrementFromCart(6)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
 
@@ -142,9 +185,13 @@
             <img src="./assets/images/image-brownie-desktop.jpg" alt="Salted Caramel Brownie image">
             <button onclick="addToCart(7)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(7)"></button>
+              <button onclick="incrementFromCart(7)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(7)"></button>
+              <button onclick="decrementFromCart(7)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
 
@@ -160,9 +207,13 @@
             <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="Panna Cotta image">
             <button onclick="addToCart(8)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
-              <button onclick="incrementFromCart(8)"></button>
+              <button onclick="incrementFromCart(8)" class="crement-button">
+                <img src="./assets/images/icon-increment-quantity.svg" alt="increment button">
+              </button>
               <p class="counter">0</p>
-              <button onclick="decrementFromCart(8)"></button>
+              <button onclick="decrementFromCart(8)" class="crement-button">
+                <img src="./assets/images/icon-decrement-quantity.svg" alt="decrement button">
+              </button>
             </div>
           </div>
 
@@ -188,16 +239,19 @@
       <div id="order-container">
         <div id="order-total">
           <p>Order Total</p>
-          <em id="total-price">$00</em>
+          <b id="total-price">$00</b>
         </div>
         <div id="carbon-neutral">
           <img src="./assets/images/icon-carbon-neutral.svg" alt="carbon neutral delivery">
           <p>This is a <b>carbon-neutral</b> delivery</p>
         </div>
-        <button onclick="">Confirm Order</button>
+        <button class="last-button" onclick="confirmOrder()">Confirm Order</button>
       </div>
     </aside>
   </div>
+
+  
+  
   <script src="./script.js"></script>
 </body>
 </html>

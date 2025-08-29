@@ -13,22 +13,21 @@ body {
 
 #main-container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     gap: 20px;
     width: 100%;
 }
 
 #title{
-    align-self: center;
+    align-self: flex-start;
 }
 
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70%;
-    margin: 20px 0;
+    width: 50%;
+    margin: 20px;
+    margin-left: 10%;
 }
 
 #products-container{
@@ -36,12 +35,14 @@ main{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
-    width: 70%;
+    width: 100%;
     max-width: 1000px;
-    height: 90vh;
+    height: 100%;
 }
 
+
 aside{
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,22 +54,26 @@ aside{
     height: fit-content;
     margin-right: 40px;
     justify-content: center;
+    margin-top: 20px;
+    position: fixed;
 }
 
 img{
     width: 100%;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 h1, h2, h3, h4, h5, h6{
     margin: 0;
+    margin-top: 4px;
 }
 
 .product{
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-
+    max-width: 100%;
 }
 
 .product div:nth-child(1) {
@@ -114,16 +119,41 @@ h4{
 
 #cart{
     align-self: flex-start;
+    margin-bottom: 20px;
+    color: hsl(14, 86%, 42%);
 }
 
 
 
 .quantity-controls {
+    margin-top: -10px;
+    height: 30px;
+    width: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 8px;
+    background-color: hsl(14, 86%, 42%);
+    border-radius: 30px;
+    color: hsl(13, 31%, 94%);
+}
+
+.crement-button {
+    background-color: hsl(14, 86%, 42%);
+    height: 25px;
+    width: 25px;
+    border: 1px solid hsl(20, 50%, 98%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.crement-button img{
+    margin-left: 10px;
 }
 .oculto {
     display: none;
@@ -133,6 +163,26 @@ h4{
     display: flex;
     justify-content: space-between;
     text-align: left;
+}
+
+.paragraph-details{
+    width: 40%;
+}
+
+.paragraph-details h4{
+    color: black;
+}
+
+.paragraph-details p:nth-child(1){
+    color: hsl(14, 86%, 42%) ;
+}
+
+.paragraph-details p:nth-child(2){
+    color: hsl(14, 25%, 72%);
+}
+
+.paragraph-details p:nth-child(3){
+    color: hsl(12, 20%, 44%);
 }
 
 .prices{
@@ -167,7 +217,7 @@ h4{
     margin-right: 10px;
 }
 
-#order-container button{
+.last-button{
     width: 100%;
     background-color: hsl(14, 86%, 42%);
     color: white;
@@ -175,11 +225,95 @@ h4{
     margin-top: 20px;
 }
 
-#order-container button:hover{
+.last-button:hover{
     background-color: hsl(14, 86%, 32%);
     cursor: pointer;
+    color: white;
 }
 
 #order-container{
     display: none;
+}
+
+#cart-container{
+    width: 100%;
+}
+
+.delete{
+    background-color: white;
+    border-radius: 100%;
+    border: 1px solid hsl(7, 20%, 60%);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.delete:hover{
+    border: 1px solid hsl(12, 20%, 44%);
+}
+
+section{
+    position: fixed;
+    padding: 20px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 50%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+section img{
+    height: 20px;
+    width: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+section h1{
+    margin-bottom: 10px;
+}
+section h4{
+    margin-bottom: 14px;
+}
+
+.confirmed-total{
+    background-color: hsl(13, 31%, 94%);
+    margin: 10px 0 10px 0;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+#background{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.ocult-confirm{
+    display: none;
+}
+
+.food-detail{
+    display: flex;
+    height: 40px;
+}
+
+.food-detail img{
+    height: 90%;
+    width: auto;
+    border-radius: 5px;
+}
+
+.food-detail b{
+    align-self: center;
+    font-size: small;
+    margin-left: 54px;
 }
