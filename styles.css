@@ -188,19 +188,10 @@ h4{
 .prices{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 10px;
     width: 100%;
 }
 
-#order-total{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#order-total p{
-    margin: 0;
-}
 
 #carbon-neutral{
     width: 100%;
@@ -304,10 +295,12 @@ section h4{
 .food-detail{
     display: flex;
     height: 40px;
+    background-color: hsl(13, 31%, 94%);
+    gap: 10px;
 }
 
 .food-detail img{
-    height: 90%;
+    height: 100%;
     width: auto;
     border-radius: 5px;
 }
@@ -316,4 +309,32 @@ section h4{
     align-self: center;
     font-size: small;
     margin-left: 54px;
+}
+
+#food-details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px 10px 0 0;
+    padding: 5%;
+    background-color: hsl(13, 31%, 94%);
+}
+
+.order-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.order-total p{
+    margin: 0;
+    align-self: center;
+    font-size: 11px;
+}
+
+.order-total b{
+    font-size: 18px;
 }

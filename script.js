@@ -45,13 +45,21 @@ function addToCart(id) {
     }
     const containerDetails = document.createElement("div");
     containerDetails.appendChild(detailsProduct(id, i));
-    containerDetails.appendChild(document.createElement("hr"));
+    
+    containerDetails.appendChild(createHr());
     contextCart.appendChild(containerDetails);
+}
+function createHr(){
+    const hr = document.createElement("hr");
+    hr.style.width = "100%";
+    return hr;
 }
 
 function modifarTotal() {
     document.getElementById("total").textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
-    document.getElementById("total-price").textContent = "$"+cart.reduce((acc, item) => acc + item.quantity*product[item.id].price, 0);
+    for (const element of document.getElementsByClassName("total-price")) {
+        element.textContent = "$"+cart.reduce((acc, item) => acc + item.quantity*product[item.id].price, 0);
+    } 
 }
 
 function incrementFromCart(id) {
@@ -112,6 +120,7 @@ function divParagraph(id, pos){
     return containerParagraph;
 }
 
+
 function detailsProduct(id, pos) {
     const container = document.createElement("div");
     container.classList.add("details");
@@ -132,6 +141,7 @@ function detailsProduct(id, pos) {
     imgDelete.alt = "delete product icon";
     buttonDelete.appendChild(imgDelete);
     container.appendChild(buttonDelete);
+
 
     return container;
 }
@@ -175,6 +185,7 @@ function confirmOrder(){
         div.appendChild(addTotal(i, cart[i].id));
         div.classList.add("food-detail"); 
         article.appendChild(div);
+        article.appendChild(createHr());
     }
     
     
