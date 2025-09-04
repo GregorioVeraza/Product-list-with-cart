@@ -14,7 +14,9 @@
 <body>
 
   <section id="confirm" class="ocult-confirm">
-    <img src="./assets/images/icon-order-confirmed.svg" alt="check logo">
+    
+      <img src="./assets/images/icon-order-confirmed.svg" alt="check logo">
+    
     <h1>Order Confirmed</h1>
     <h4>We hope you enjoy your food!</h4>
     <article id="food-details">
@@ -34,7 +36,11 @@
 
         <div class="product">
           <div>
-            <img src="./assets/images/image-waffle-desktop.jpg" alt="Waffle image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-waffle-mobile.jpg">
+              <img src="./assets/images/image-waffle-desktop.jpg" alt="Waffle image">
+            </picture>
+              
             <button onclick="addToCart(0)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(0)" class="crement-button">
@@ -58,7 +64,11 @@
         
         <div class="product">
           <div>
-            <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="creme Brûlée image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-creme-brulee-mobile.jpg">
+              <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="creme Brûlée image">
+            </picture>
+            
             <button onclick="addToCart(1)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(1)" class="crement-button">
@@ -77,7 +87,10 @@
         
         <div class="product">
           <div>
-            <img src="./assets/images/image-macaron-desktop.jpg" alt="Macaron image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-macaron-mobile.jpg">
+              <img src="./assets/images/image-macaron-desktop.jpg" alt="Macaron image">
+            </picture>
             <button onclick="addToCart(2)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(2)" class="crement-button">
@@ -98,7 +111,10 @@
 
         <div class="product">
           <div>
-            <img src="./assets/images/image-tiramisu-desktop.jpg" alt="Macaron image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-tiramisu-mobile.jpg">
+              <img src="./assets/images/image-tiramisu-desktop.jpg" alt="Macaron image">
+            </picture>
             <button onclick="addToCart(3)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(3)" class="crement-button">
@@ -119,7 +135,10 @@
         
         <div class="product">
           <div>
-            <img src="./assets/images/image-baklava-desktop.jpg" alt="Baklava image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-baklava-mobile.jpg">
+              <img src="./assets/images/image-baklava-desktop.jpg" alt="Baklava image">
+            </picture>
             <button onclick="addToCart(4)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(4)" class="crement-button">
@@ -140,7 +159,10 @@
         
         <div class="product">
           <div>
-            <img src="./assets/images/image-meringue-desktop.jpg" alt="Lemon Meringue Pie image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-meringue-mobile.jpg">
+              <img src="./assets/images/image-meringue-desktop.jpg" alt="Lemon Meringue Pie image">
+            </picture>
             <button onclick="addToCart(5)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(5)" class="crement-button">
@@ -162,7 +184,10 @@
         
         <div class="product">
           <div>
-            <img src="./assets/images/image-cake-desktop.jpg" alt="Red Velvet Cake image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-cake-mobile.jpg">
+              <img src="./assets/images/image-cake-desktop.jpg" alt="Red Velvet Cake image">
+            </picture>
             <button onclick="addToCart(6)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(6)" class="crement-button">
@@ -182,7 +207,10 @@
         
         <div class="product">
           <div>
-            <img src="./assets/images/image-brownie-desktop.jpg" alt="Salted Caramel Brownie image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-brownie-mobile.jpg">
+              <img src="./assets/images/image-brownie-desktop.jpg" alt="Salted Caramel Brownie image">
+            </picture>
             <button onclick="addToCart(7)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(7)" class="crement-button">
@@ -204,7 +232,10 @@
         
         <div class="product">
           <div>
-            <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="Panna Cotta image">
+            <picture>
+              <source media="(max-width:375px )" srcset="./assets/images/image-panna-cotta-mobile.jpg">
+              <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="Panna Cotta image">
+            </picture>
             <button onclick="addToCart(8)"><img src="./assets/images/icon-add-to-cart.svg" alt="add product icon">Add to Cart</button>
             <div class="quantity-controls oculto">
               <button onclick="incrementFromCart(8)" class="crement-button">
